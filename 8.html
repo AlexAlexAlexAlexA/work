@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我会记住直到忘记为止</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			table {
+				border-collapse: collapse;
+				border: 1px solid yellow;
+				margin: 0 auto;
+			}
+			
+			#div1 {
+				height: 700px;
+				margin: 0 auto;
+				border: 1px solid black;
+				background-image: url(img/8.1.jpg);
+				width: 1000px;
+			}
+			
+			#div2 {
+				width: 600px;
+				height:80px;
+				font-size: 30px;
+				margin: 0 auto;
+			}
+			td {
+				width: 120px;
+				height: 80px;
+				border-collapse: collapse;
+				border: 1px solid #000000;
+				text-align: center;
+				color: yellow;
+			}
+			
+			.red {
+				color: red;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function deleteCurrentRow(obj) {
+				var tr = obj.parentNode.parentNode;
+				var tbody = tr.parentNode;
+				tbody.removeChild(tr);
+				//只剩行首时删除表格
+				if(tbody.rows.length == 1) {
+					tbody.parentNode.removeChild(tbody);
+				}
+			}
+		</script>
+		<script>
+			function use(data) {
+				var num = data.parentNode.parentNode;
+				num.parentNode.removeChild(fa);
+			}
+
+			function function1(first) {
+				first.style.color = "red";
+			}
+
+			function function2(first) {
+				first.style.color = "black";
+			}
+			window.onload = function() {
+				var input_botton = document.getElementById("input");
+				var count = 2;
+				input_botton.onclick = function() {
+					count++;
+					var name = document.getElementById("name").value;
+					var sexs = document.getElementsByName("radio");
+					var table = document.getElementById("table");
+					var sex;
+					for(var i = 0; i <= 1; i++) {
+						if(sexs[i].checked == true) {
+							if(sexs[i].value == 0) sex = "男";
+							else sex = "女";
+							break;
+						}
+					}
+					var x = document.createElement("tr");
+					x.innerHTML = "<td>" + count + "</td>" + "<td id='zz" + count + "' onmouseover='function1(this)' onmouseout='function2(this)'>" + name + "</td>" + "<td>" + sex + "</td>" + "<td>" + "母鸡" + "</td>" +
+						"<td><a id='XX" + count + "' href='#' onclick='use(this);'>巴拉拉能量</a></td>";
+					table.appendChild(x);
+				}
+			}
+		</script>
+		<div id="div1">
+			<div id="div2">
+				<span> 姓名：</span>
+				<input type="text" id="name" />
+				<span> 性别：</span> 男：
+				<input name="radio" type="radio" value="0" /> 女：
+				<input name="radio" type="radio" value="1" />
+				<button id="input">添加</button>
+			</div>
+			<table id="table">
+				<tr>
+					<td>编号</td>
+					<td>姓名</td>
+					<td>性别</td>
+					<td>婚配情况</td>
+					<td>操作</td>
+				</tr>
+				<td>1</td>
+					<td>蚂蚁飞</td>
+					<td>未知</td>
+					<td>呵呵</td>
+					<td><a  href="javascript:;"onclick='{if(confirm("确定要锤这个蚂蚁飞吗?")) {deleteCurrentRow(this); }else {}}'>锤一顿</a></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>徐进</td>
+					<td>女</td>
+					<td>已婚</td>
+					<td><a  href="javascript:;"onclick='{if(confirm("确定要亲这个徐进吗?")) {deleteCurrentRow(this); }else {}}'>亲一口</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+
+</html>
