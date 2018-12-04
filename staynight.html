@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+		<title>欢迎来到大头的零食屋</title>
+
+		<style>
+			body {
+				width: 100%;
+			}
+			
+			.big1 {
+				background-image: url(img/back.jpg);
+				width: 100%;
+			}
+			
+			.divtop {
+				display: inline-block;
+				margin: 6px;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#parent>li>span {
+				background: honeydew;
+				display: block;
+				width: 200px;
+				border: 1px solid #ECEEF2;
+			}
+			
+			li {
+				line-height: 40px;
+				display: block;
+				font-size: 25px;
+			}
+			
+			li p {
+				display: inline-block;
+				width: 0px;
+				height: 0px;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 5px solid#2f2f2f;
+			}
+			
+			li>ul {
+				display: none;
+			}
+			
+			li>ul>li {
+				border: 1px solid #DEDEDE;
+				width: 199px;
+			}
+			
+			#parent span:hover+ul {
+				display: block;
+			}
+			
+			#parent span:hover>p {
+				display: inline-block;
+				width: 0px;
+				height: 0px;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				border-left: 5px solid#2f2f2f;
+			}
+			
+			input {
+				width: 75%;
+				height: 75px;
+				margin: auto;
+				padding: auto;
+				position: absolute;
+				right: 100px;
+				top: 150px;
+				font-size: 40px;
+			}
+			
+			.search {
+				width: 100px;
+				height: 80px;
+			}
+			
+			a:link {
+				color: hotpink;
+			}
+			
+			a:visited {
+				color: hotpink;
+			}
+			
+			a:hover {
+				color: hotpink;
+			}
+			
+			a:active {
+				color: yellow;
+			}
+			
+			.span1 {
+				position: absolute;
+				right: 220px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.span2 {
+				position: absolute;
+				right: 150px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.span3 {
+				position: absolute;
+				right: 30px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.span4 {
+				position: absolute;
+				right: 300px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.span5 {
+				position: absolute;
+				right: 410px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.span6 {
+				position: absolute;
+				right: 520px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.span {
+				position: absolute;
+				right: 800px;
+				top: 20px;
+				font-size: 20px;
+			}
+			
+			.all {
+				width: 960px;
+				margin: auto;
+				
+				background-color: lightcyan;
+			}
+			
+			.left {
+				float: left;
+				position: fixed;
+				left: 0;
+				top: 320px;
+			}
+			
+			h1 {
+				text-align: center;
+				font-size: 50px;
+			}
+			h2{
+				color: lightpink;
+			}
+			.a{
+				font-size: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="big1">
+			<div class="divtop">
+				<img src="img/u=425909910,3003175316&fm=26&gp=0.jpg" />
+			</div>
+			<input type="text" placeholder="请输入想要搜索的关键字">
+			<input type="submit" value="搜索" class="search" />
+			<a href="#"><span class="span5">免费注册</span></a>
+			<a href="#"><span class="span4">联系客服</span></a>
+			<a href="#"><span class="span1">登录</span></a>
+			<a href="#"><span class="span2">注册</span></a>
+			<a href="#"><span class="span3">忘记密码？</span></a>
+			<a href="ma.html"><span class="span6">广告合作</span></a>
+		</div>
+		<div class="left">
+			<ul id="parent">
+				<li>
+					<span>分类</span>
+					<ul>
+						<li>瘦身伙伴</li>
+						<li>熬夜必备</li>
+						<li>节假礼包</li>
+						<li>奇葩口味</li>
+						<li>心情转换</li>
+						<li>趣味创意</li>
+						<li>整蛊恶搞</li>
+					</ul>
+				</li>
+				<li>
+					<span>品牌</span>
+					<ul>
+						<li>三只松鼠</li>
+						<li>不二家</li>
+						<li>良品铺子</li>
+						<li>金大洲</li>
+						<li>皇冠</li>
+						<li>丽芝士</li>
+						<li>EGO</li>
+						<li>百草味</li>
+						<li>......</li>
+					</ul>
+				</li>
+				<li>
+					<span>用户</span>
+					<ul>
+						<li>登录</li>
+						<li>注册</li>
+						<li>联系客服</li>
+						<li>商业合作</li>
+						<li>广告投放</li>
+						<li>我有问题</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="all">
+			<h1>最适合熬夜加班的时候吃的食品</h1>
+			<br /><br /><br /><br /><br /><br /><br /><br />
+			<h2>熬夜，加班，在现在的都市生活中已经成为了很多上班族的家常便饭了，社会的快节奏，工作的压力，使得我们不得不经常熬夜加班。大头的零食屋就特意给大家准备了一些很不错的熬夜标配美味零食</h2>
+			<br /><br /><br />
+			<h2>1.三只松鼠干果礼包</h2>	 
+			<img src="img/u=2636797446,3422817951&fm=26&gp=0.jpg" />
+			<br /><br /><br />
+			<h2>2.良品铺子果干</h2>	 
+			<img src="img/u=2653582787,3704171351&fm=26&gp=0.jpg" />
+			<br /><br /><br />
+			<h2>3.M&S巧克力</h2>	 
+			<img src="img/u=938533062,223336482&fm=26&gp=0.jpg" />
+			<br /><br /><br />
+			<h2>4.金大洲的金针菇</h2>	 
+			<img src="img/下载.jpg" />
+			<br /><br /><br />
+			<h2>5.法丽兹曲奇</h2>	 
+			<img src="img/u=743486170,4111013887&fm=26&gp=0.jpg" />
+			<br /><br /><br />
+			<h2>6.卫龙大面筋</h2>	 
+			<img src="img/u=862239495,2982443803&fm=26&gp=0.jpg" />
+			<br /><br /><br />
+			<h2>最后，网工的web作业，实乃熬夜的必备圣品</h2>
+			<img src="img/u=9618676982,3339084341&fm=11&gp=0.jpg" />
+			<img src="img/1543.jpeg" />
+			<br /><br /><br />
+			<center><a class="a" href="#">点击购买</a></center>
+		</div>
+	</body>
+
+</html>
